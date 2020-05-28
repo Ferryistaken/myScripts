@@ -10,6 +10,6 @@ response = requests.get(
 json = response.text
 
 price = json.split("price\":", 1)[1]
-price = price.split(",", 1)[0]
+price = round(float(price.split(",", 1)[0]), 4)
 
-print(price)
+print("⟁" + str(price))
