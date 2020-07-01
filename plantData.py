@@ -6,7 +6,7 @@ import requests
 import re
 import json
 
-humidity = json.loads(requests.get("http://192.168.3.16:8080/rest/items/plantHumidityPercentage"))
+humidity = json.loads(requests.get("http://192.168.3.16:8080/rest/items/plantHumidityPercentag"))
 
 
 print(humidity.text)
