@@ -5,4 +5,4 @@ wal -i $HOME/Pictures/wallpapers/$file
 
 echo $file
 
-$HOME/.config/bspwm/bspwmrc
+$HOME/Documents/scripts/setColor.sh
