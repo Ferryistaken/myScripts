@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+find $HOME -type f -name "*.pdf" 2>/dev/null | rofi -dmenu -i -p "Open PDF" | sed -e 's/.*/"&"/' | xargs zathura

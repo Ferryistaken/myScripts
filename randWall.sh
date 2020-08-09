@@ -1,7 +1,7 @@
 #!/bin/sh
 
-file=`ls $HOME/Pictures/wallpapers/ | shuf | head -n 1`
-wal -i $HOME/Pictures/wallpapers/$file
+file=`ls $1 | shuf | head -n 1`
+wal -i $1/$file
 
 echo $file
 
