@@ -1,9 +1,10 @@
 #!/usr/bin/bash
 
-mediaStatus=$(playerctl --player=playerctld metadata --format " ♫ {{ title }} - {{ artist }}({{ status }})")
+mediaStatus=`playerctl metadata 2>&1`
 
-if [[ $mediaStatus == "No player could handle this command" ]]; then
+
+if [[ "$mediaStatus" == "No player could handle this command" ]]; then
 	echo "♫ No Player Found"
 else
-	playerctl --player=playerctld metadata --format " ♫ {{ title }} - {{ artist }}({{ status }})"
+	echo `playerctl --player=playerctld metadata --format " ♫ {{ title }} - {{ artist }}({{ status }})"`
 fi
