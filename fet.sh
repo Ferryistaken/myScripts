@@ -126,6 +126,7 @@ read -r host < /proc/sys/kernel/hostname
 
 # default value
 : "${info:=n user os sh wm up gtk cpu mem host kern pkgs term col n}"
+#: "${info:=n user os sh wm up cpu kern pkgs term col n}"
 
 for i in $info; do
 	case $i in

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sensors | python /home/ferry/Documents/scripts/cpuTemp.py
+sensors | python3 /home/ferry/Documents/scripts/cpuTemp.py
