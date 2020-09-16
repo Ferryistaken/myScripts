@@ -6,5 +6,7 @@ mediaStatus=`playerctl metadata 2>&1`
 if [[ "$mediaStatus" == "No player could handle this command" ]]; then
 	echo "♫ No Player Found"
 else
-	echo `playerctl --player=playerctld metadata --format " ♫ {{ title }} - {{ artist }}({{ status }})"`
+	title=`playerctl --player=playerctld metadata --format " ♫ {{ title }}" | cut -c1-30`
+	#echo $title...
+	echo "$title... `playerctl --player=playerctld metadata --format " - {{ artist }}({{ status }})"`"
 fi

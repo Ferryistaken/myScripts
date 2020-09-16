@@ -2,4 +2,4 @@
 
 let color=`xcolor`
 
-#notify-send Copied Color "$color"; echo $color | xclip -selection clipboard
+notify-send Copied Color "$color"; echo $color | xclip -selection clipboard
