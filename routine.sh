@@ -1,4 +1,5 @@
 #!/usr/bin/sh
+shutdown="false"
 
 upgrade() {
 echo -e "\n\033[0;37mStarting full system upgrade\033[0m\n"
@@ -12,6 +13,7 @@ echo "By default, it just pushes dotfiles to master"
 echo "Flags:"
 echo "    -u | --upgrade -> also do a full system upgrade"
 echo "    -h | --help -> show this message"
+echo "    -s | --shutdown -> shut down when done"
 }
 
 while [ "$1" != "" ]; do
@@ -35,5 +37,6 @@ echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/Documents/scripts;gi
 
 if [ $shutdown = "true" ];
 then
-	echo "shutdown now"
+	sleep 1
+	shutdown now
 fi
