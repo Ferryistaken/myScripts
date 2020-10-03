@@ -18,6 +18,8 @@ while [ "$1" != "" ]; do
     case $1 in
         -u | --upgrade )        upgrade
                                 ;;
+        -s | --shutdown )       shutdown="true"
+                                ;;
         -h | --help )           usage
                                 exit
                                 ;;
@@ -30,3 +32,8 @@ done
 
 echo -e "\n\033[0;32mSyncing dotfiles\033[0m\n" && yadm pull origin master && yadm stage -u && yadm commit -m "routine commit" && yadm push origin master
 echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/Documents/scripts;git pull origin master; git stage .; git commit -m "routine push"; git push origin master; cd -)
+
+if [ $shutdown = "true" ];
+then
+	echo "shutdown now"
+fi
