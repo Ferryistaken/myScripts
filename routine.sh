@@ -29,3 +29,4 @@ done
 
 
 echo -e "\n\033[0;32mPushing dotfile changes\033[0m\n" && yadm stage -u && yadm commit -m "routine commit" && yadm push origin master
+echo -e "\n\033[0;32mPushing script changes\033[0m\n" && (cd $HOME/Documents/scripts; git stage .; git commit -m "routine push"; git push origin master; cd -)
