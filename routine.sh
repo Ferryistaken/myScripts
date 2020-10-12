@@ -37,6 +37,6 @@ echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/Documents/scripts;gi
 
 if [ $shutdown = "true" ];
 then
-	sleep 5
+	sleep 15
 	shutdown now
 fi
