@@ -3,4 +3,4 @@
 $HOME/Documents/scripts/bspwmColorReload.sh;
 spicetify update;
 pywal-discord;
-pywalfox update;
+pywalfox update 2>/dev/null;
