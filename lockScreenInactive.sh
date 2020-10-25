@@ -2,6 +2,6 @@
 
 echo `xprintidle`
 
-if [[ `xprintidle` -ge 600000 ]]; then
+if [[ `xprintidle` -ge 1800000 ]]; then
 	betterlockscreen -u $HOME/Pictures/wallpapers/ -l blur;
 fi
