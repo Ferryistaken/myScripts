@@ -32,8 +32,8 @@ while [ "$1" != "" ]; do
 done
 
 echo -e "\n\033[0;32mCopying files to extra directory\033[0m\n"
-cp -r ~/.config/bspwm/ ~/.config/extras/argo/bspwm
-cp -r ~/.config/polybar/ ~/.config/extras/argo/polybar
+cp --no-preserve=mode -r ~/.config/bspwm/ ~/.config/extras/argo/bspwm
+cp --no-preserve=mode -r ~/.config/polybar/ ~/.config/extras/argo/polybar
 
 echo -e "\n\033[0;32mSyncing dotfiles\033[0m\n" && yadm pull origin master && yadm stage -u && yadm commit -m "routine commit from `hostname`" && yadm push origin master
 echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/Documents/scripts;git pull origin master; git stage .; git commit -m "routine push from `hostname`"; git push origin master; cd -)
