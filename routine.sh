@@ -4,7 +4,7 @@ shutdown="false"
 upgrade() {
 echo -e "\n\033[0;37mStarting full system upgrade\033[0m\n"
 
-$HOME/Documents/scripts/fullUpgrade.sh
+$HOME/.scripts/fullUpgrade.sh
 }
 
 usage() {
@@ -36,7 +36,7 @@ cp --no-preserve=mode -r ~/.config/bspwm/ ~/.config/extras/argo/bspwm
 cp --no-preserve=mode -r ~/.config/polybar/ ~/.config/extras/argo/polybar
 
 echo -e "\n\033[0;32mSyncing dotfiles\033[0m\n" && yadm pull origin master && yadm stage -u && yadm commit -m "routine commit from `hostname`" && yadm push origin master
-echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/Documents/scripts;git pull origin master; git stage .; git commit -m "routine push from `hostname`"; git push origin master; cd -)
+echo -e "\n\033[0;35mSyncing scripts\033[0m\n" && (cd $HOME/.scripts;git pull origin master; git stage .; git commit -m "routine push from `hostname`"; git push origin master; cd -)
 
 if [ $shutdown = "true" ];
 then
