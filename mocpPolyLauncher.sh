@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-mocp -i 2> /dev/null | python /home/ferry/Documents/scripts/mocpPoly.py
+mocp -i 2> /dev/null | python $HOME/.scripts/mocpPoly.py

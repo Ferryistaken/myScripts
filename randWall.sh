@@ -5,4 +5,4 @@ wal -i $1/$file
 
 echo $file
 
-$HOME/Documents/scripts/setColor.sh
+$HOME/.scripts/setColor.sh

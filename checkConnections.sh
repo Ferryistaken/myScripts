@@ -15,17 +15,17 @@ while true; do
 		#echo ""
 		#echo "oldConnections: $oldConnections"
 		#echo "newConnections: $newConnections"
-		(sleep 3; /home/ferry/Documents/scripts/removeNotifications.sh) &
+		(sleep 3; $HOME/.scripts/removeNotifications.sh) &
 		#echo "after sleep"
 		oldConnections=$newConnections
 	elif [ $newConnections -lt $oldConnections ]; then
 		if [ `ss | grep -i ssh | wc -l` -eq "0" ]; then
 			notify-send --icon=gtk-info SSH "No more clients connected"
-			(sleep 3; /home/ferry/Documents/scripts/removeNotifications.sh) &
+			(sleep 3; $HOME/.scripts/removeNotifications.sh) &
 			oldConnections=$newConnections
 		else
 			notify-send --icon=gtk-info SSH "1 or more clients disconnected"
-			(sleep 3; /home/ferry/Documents/scripts/removeNotifications.sh) &
+			(sleep 3; $HOME/.scripts/removeNotifications.sh) &
 			oldConnections=$newConnections
 		fi
 	fi
