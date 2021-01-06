@@ -1,10 +1,10 @@
 #!/usr/bin/sh
 
-# Shadowplay functionality
-obs --startreplaybuffer --profile "shadowplay"&
+# this makes them not steal focus
+bspc config ignore_ewmh_focus true
 
-# Torrent client
-transmission-gtk&
+# Start mail client
+mailspring&
 
-# Spotify
-spotify&
+# turn the focus back
+bspc config ignore_ewmh_focus false
