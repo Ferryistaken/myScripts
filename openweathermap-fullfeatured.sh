@@ -53,7 +53,7 @@ get_duration() {
 }
 
 KEY="b0e510e80c9697bce5772bb88e1c4c01"
-CITY="New York"
+CITY="New York City, US"
 UNITS="metric"
 SYMBOL="°"
 
