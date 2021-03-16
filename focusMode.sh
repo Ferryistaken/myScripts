@@ -1,5 +1,13 @@
 #!/bin/sh
 
-# this is so that I can call it in rofi
+# kill unwanted apps
+killall polybar
+killall glava
 
-/home/ferry/.config/bspwm/focusMode
+$HOME/.config/polybar/launch-tiny.sh
+
+
+bspc config window_gap 0
+bspc config border_width 0
+bspc config top_padding 0
+

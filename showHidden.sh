@@ -9,5 +9,5 @@ for wid in "${ids[@]}"; do
     ')"}"$'\n'
 done
 
-id_index="$(<<< "$options" rofi -dmenu -i -format i -p "Show")"
+id_index="$(<<< "$options" rofi -dmenu -i -format i -p "Show" -theme themes/sidetab.rasi)"
 bspc node "${ids[${id_index}]}" -g hidden=off -f; bspc node "${ids[${id_index}]}" -g sticky=off -f

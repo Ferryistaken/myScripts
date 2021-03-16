@@ -1,5 +1,9 @@
 #!/bin/sh
 
-# this is so that I can call it in rofi
+# restart wanted apps
+bash $HOME/.config/polybar/launchBSPWM.sh &
+picom --config .config/picom/picom.conf &
 
-/home/ferry/.config/bspwm/cleanMode
+bspc config window_gap 40
+bspc config top_padding 0
+bspc config border_width 2
