@@ -1,6 +1,9 @@
 #!/usr/bin/sh
 
 #find $HOME -not -path '*/\.*' -type f  -name "*.pdf" | rofi -dmenu -i -p "Open PDF" | sed -e 's/.*/"&"/' | xargs zathura
-find $HOME/Documents -type f  -name "*.pdf" | rofi -dmenu -i -p "Open PDF" | sed -e 's/.*/"&"/' | xargs zathura
+#find $HOME/Documents -type f  -name "*.pdf" | rofi -dmenu -i -p "Open PDF" | sed -e 's/.*/"&"/' | xargs zathura
+
+# This is so that if I exit rofi it doesn't open zathura
+out=$(find $HOME/Documents -type f  -name "*.pdf" | rofi -dmenu -i -p "Open PDF") && echo "$out" | sed -e 's/.*/"&"/' | xargs zathura
 
 #find $HOME -not -path '*/\.*' -type f  -name "*.pdf" | fzf | sed -e 's/.*/"&"/' | xargs zathura

@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 # https://www.toptal.com/developers/gitignore/api/
 BASEURL="https://www.toptal.com/developers/gitignore/api/"
